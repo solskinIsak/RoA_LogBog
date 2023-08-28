@@ -3,7 +3,7 @@
 
 SimpleLED led1(LED_BUILTIN, false, 50, 200);
 SimpleLED led2(LED_BUILTIN_AUX, false, 50, 150);
-long stateTime[8] = {0,0,0,0,0,0,0,0};
+long duration[8] = {0,0,0,0,0,0,0,0};
 
 void setup()
 {
