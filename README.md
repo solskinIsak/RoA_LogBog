@@ -9,3 +9,6 @@ Vi lærte om volt, ampere og modstand op til vores trafiklysprojekt og fik udlev
 
 28-8-2023
 vi fik lavet første udkast til vores trafiklysprojekt. vi havde lidt en ide til hvordan den skulle laves og efter justeringer så kom vi frem til et svar vi godt vil snakke med tobias om i morgen til undervisningen. vi kom selv frem til løsningen og så ingen videoer eller guides. 
+
+29-9-2023
+Vi fik udleveret en knap som vi blev bedt om at bruge således at vores nodeMCU kunne registrere når knappen blev trykket på samt at sørge for den kun registreret et enkelt klik ad gangen, vi fik kodet nogle classer og funktioner og kom i mål med dette, herefter fik vi udleveret en variation af interessante dimser som vi hver især i gruppe skal udforske og via "selvlære" få mekanikken til at virke og evt kode nogle klasser som aflevering til torsdag.
