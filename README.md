@@ -12,3 +12,7 @@ vi fik lavet første udkast til vores trafiklysprojekt. vi havde lidt en ide til
 
 # 29-9-2023
 Vi fik udleveret en knap som vi blev bedt om at bruge således at vores nodeMCU kunne registrere når knappen blev trykket på samt at sørge for den kun registreret et enkelt klik ad gangen, vi fik kodet nogle classer og funktioner og kom i mål med dette, herefter fik vi udleveret en variation af interessante dimser som vi hver især i gruppe skal udforske og via "selvlære" få mekanikken til at virke og evt kode nogle klasser som aflevering til torsdag.
+
+# 30-9-2023
+Vi fik arbejdet på vores ServoMotor, testet forskellige teorier og kom til sidst i mål med at få lavet en class der i sidste ende blev ret plug-and-play til fremtidigt brug hvilket var godt! - herudover fandt vi ud af at man kan læse den præcise position hvor "armen" på servoen og hvor den befinder sig samt at servoen ikke kan gå under et 850 millis delay eftersom vi også testede på 700 milisekunder og 500 milisekunder men jo kortere delay jo mindre præcis var bevægelsesgangen.
+  teorien lyder at der ikke er nok volt for servoenn at arbejde med eftersom at servoenn skal bruge 5V og ESP8266 kun giver 3.3V men sjov og lærerig dag!
