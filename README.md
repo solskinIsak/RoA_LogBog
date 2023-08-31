@@ -20,3 +20,5 @@ Vi fik arbejdet på vores ServoMotor, testet forskellige teorier og kom til sids
   # 31-9-2023
   Idag fik vi til opgave at forsge at oprette en WiFi forbindelse via vores NodeMCU's WiFi chip, det krævede lidt research eftersom at vores Node originalt kørte med en anden Baud rate end vores projekt krævede (9600 og vores projekt krævede 115200) en klar definition på en baud rate er jeg ikke noget frem til endnu, men ved at smide monitor_speed = 115200
 ind i vores platformio.ini fil som så sætter vores monitor_speed og oversat til baud rate til de 115200 så blev det gjort muligt via vores kode at oprette forbindelse til et netværk, men kun via mit eget private telefonnetværk, gennem internetdeling var det muligt at få den indbyggede LED til at blinke på Node'n.
+##Update til 31-9-2023
+Arbejdede videre med at få LED til at blinke ved brug af HTTP side over wifi, jeg formåede at få lys i to andre LED'er ved lidt modificering til den originale kode, men alle 3 LED'er kan ikke lyse uden den ene slukker - viste sig at være en hardware fejl, modstanden gjorde så der ikke var nok volt/strøm til alle 3 LED'er på samme tid, fjerner man modstanden forsvandt problemet.
