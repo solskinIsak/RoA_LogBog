@@ -11,7 +11,7 @@
 
 #ifndef STASSID
 #define STASSID "Isak"
-#define STAPSK "CHANGEME"
+#define STAPSK "tigligestille"
 #endif
 
 const char* ssid = STASSID;
@@ -26,6 +26,10 @@ void setup() {
 
   // prepare LED
   pinMode(LED_BUILTIN, OUTPUT);
+  pinMode(D6, OUTPUT);
+  pinMode(D8, OUTPUT);
+  digitalWrite(D6, 0);
+  digitalWrite(D8, 0);
   digitalWrite(LED_BUILTIN, 0);
 
   // Connect to WiFi network
@@ -67,17 +71,28 @@ void loop() {
 
   // Match the request
   int val;
+  int val2;
+  int val3;
   if (req.indexOf(F("/gpio/0")) != -1) {
-    val = 0;
+  digitalWrite(LED_BUILTIN, LOW);
   } else if (req.indexOf(F("/gpio/1")) != -1) {
-    val = 1;
+  digitalWrite(LED_BUILTIN, HIGH);
+  }else if (req.indexOf(F("/gpio/2")) != -1) {
+    digitalWrite(D6, LOW);
+  }else if (req.indexOf(F("/gpio/3")) != -1) {
+    digitalWrite(D6, HIGH);
+  }else if (req.indexOf(F("/gpio/4")) != -1) {
+  digitalWrite(D8, LOW);
+  }else if (req.indexOf(F("/gpio/5")) != -1) {
+  digitalWrite(D8, HIGH);
   } else {
     Serial.println(F("invalid request"));
     val = digitalRead(LED_BUILTIN);
+    val2 = digitalRead(D6);
+    val3 = digitalRead(D8);
   }
 
   // Set LED according to the request
-  digitalWrite(LED_BUILTIN, val);
 
   // read/ignore the rest of the request
   // do not client.flush(): it is for output only, see below
@@ -93,9 +108,22 @@ void loop() {
   client.print((val) ? F("high") : F("low"));
   client.print(F("<br><br>Click <a href='http://"));
   client.print(WiFi.localIP());
-  client.print(F("/gpio/1'>here</a> to switch LED GPIO on, or <a href='http://"));
+  client.print(F("/gpio/1'>here</a> to switch LED GPIO off, or <a href='http://"));
   client.print(WiFi.localIP());
-  client.print(F("/gpio/0'>here</a> to switch LED GPIO off.</html>"));
+  client.print(F("/gpio/0'>here</a> to switch LED GPIO on.</html>"));
+  client.print(WiFi.localIP());
+  client.print(F("<br><br>Click <a href='http://"));
+  client.print(WiFi.localIP());
+  client.print(F("/gpio/2'>here</a> to switch LED BLUE off, or <a href='http://"));
+  client.print(WiFi.localIP());
+  client.print(F("/gpio/3'>here</a> to switch LED BLUE on.</html>"));
+   client.print(WiFi.localIP());
+  client.print(F("<br><br>Click <a href='http://"));
+  client.print(WiFi.localIP());
+  client.print(F("/gpio/4'>here</a> to switch LED GREEN off, or <a href='http://"));
+  client.print(WiFi.localIP());
+  client.print(F("/gpio/5'>here</a> to switch LED GREEN on.</html>"));
+
 
   // The client will actually be *flushed* then disconnected
   // when the function returns and 'client' object is destroyed (out-of-scope)
