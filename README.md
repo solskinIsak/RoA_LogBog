@@ -16,3 +16,7 @@ Vi fik udleveret en knap som vi blev bedt om at bruge således at vores nodeMCU 
 # 30-9-2023
 Vi fik arbejdet på vores ServoMotor, testet forskellige teorier og kom til sidst i mål med at få lavet en class der i sidste ende blev ret plug-and-play til fremtidigt brug hvilket var godt! - herudover fandt vi ud af at man kan læse den præcise position hvor "armen" på servoen og hvor den befinder sig samt at servoen ikke kan gå under et 850 millis delay eftersom vi også testede på 700 milisekunder og 500 milisekunder men jo kortere delay jo mindre præcis var bevægelsesgangen.
   teorien lyder at der ikke er nok volt for servoenn at arbejde med eftersom at servoenn skal bruge 5V og ESP8266 kun giver 3.3V men sjov og lærerig dag!
+
+  # 31-9-2023
+  Idag fik vi til opgave at forsge at oprette en WiFi forbindelse via vores NodeMCU's WiFi chip, det krævede lidt research eftersom at vores Node originalt kørte med en anden Baud rate end vores projekt krævede (9600 og vores projekt krævede 115200) en klar definition på en baud rate er jeg ikke noget frem til endnu, men ved at smide monitor_speed = 115200
+ind i vores platformio.ini fil som så sætter vores monitor_speed og oversat til baud rate til de 115200 så blev det gjort muligt via vores kode at oprette forbindelse til et netværk, men kun via mit eget private telefonnetværk, gennem internetdeling var det muligt at få den indbyggede LED til at blinke på Node'n.
