@@ -22,3 +22,7 @@ Vi fik arbejdet på vores ServoMotor, testet forskellige teorier og kom til sids
 ind i vores platformio.ini fil som så sætter vores monitor_speed og oversat til baud rate til de 115200 så blev det gjort muligt via vores kode at oprette forbindelse til et netværk, men kun via mit eget private telefonnetværk, gennem internetdeling var det muligt at få den indbyggede LED til at blinke på Node'n.
 ##Update til 31-9-2023
 Arbejdede videre med at få LED til at blinke ved brug af HTTP side over wifi, jeg formåede at få lys i to andre LED'er ved lidt modificering til den originale kode, men alle 3 LED'er kan ikke lyse uden den ene slukker - viste sig at være en hardware fejl, modstanden gjorde så der ikke var nok volt/strøm til alle 3 LED'er på samme tid, fjerner man modstanden forsvandt problemet.
+
+# 5-9-2023
+Idag blev vi introduceret til 3D printerne af tobias samt fik vi installeret OpenSCAD og tobias' overlay til java så vi kan kode i java som vi kender og så bliver det i baggrunden oversat til sprog brugt i OpenSCAD til at vise vores 3D modeller, vi fik arbejdet videre med det efter skole og kom faktisk i mål med at få lavet min helt egen Model af en klods med mit navn som hul igennem modellen, super interessant dag, dejligt at få skrevet i noget java igen og fedt at få brugt OpenSCAD som værktøj, og glæder mig til at få sat noget struktur på.
+
