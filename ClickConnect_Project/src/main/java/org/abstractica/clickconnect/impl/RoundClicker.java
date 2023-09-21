@@ -96,7 +96,7 @@ public class RoundClicker implements RoundClickSystem
 
 		RoundClicker clicker = new RoundClicker(csg, 10);
 		Geometry3D hole = clicker.getLockedHoleCutout(0);
-		Geometry3D plate = csg.box3D(10, 25, 5, false);
+		Geometry3D plate = csg.box3D(10, 10, 5, false);
 		//plate = csg.translate3DZ(-5).transform(plate);
 		Geometry3D res = csg.difference3D(plate, hole);
 		csg.view(res);
