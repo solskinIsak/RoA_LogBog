@@ -20,10 +20,13 @@ public class EvilCube implements RoundClickSystem {
 
 
 
-        Geometry2D text = csg.text2D("(^͜^)", 5.0,10,64);
-        Geometry3D text3d = csg.linearExtrude(1, true,text);
-        Transform3D move = csg.translate3DX(-12.5);
+        Geometry2D text = csg.text2D(".͜.", 7.0,10,64);
+        Geometry3D text3d = csg.linearExtrude(2, true,text);
+        Transform3D move = csg.translate3DX(-0.53*unit);
         text3d = move.transform(text3d);
+        text3d = csg.translate3DZ(0.75*unit).transform(text3d);
+        text3d = csg.translate3DY(0.75*unit).transform(text3d);
+        text3d = csg.rotate3DX(csg.degrees(90)).transform(text3d);
 
         Geometry3D clickCube = csg.box3D(0.25*unit, 0.25*unit, 0.25*unit, false);
         clickCube = csg.translate3DZ(1.25*unit).transform(clickCube);
