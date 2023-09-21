@@ -2,7 +2,7 @@ difference()
 {
     linear_extrude(height = 5.0, twist = 0.0, scale = 1.0, slices = 1, center = false)
     {
-        scale([10.0, 50.0])
+        scale([10.0, 25.0])
         {
             M22();
         }
