@@ -1,71 +1,90 @@
 difference()
 {
-    difference()
+    union()
     {
-        union()
+        translate([0.0, 0.0, 2.25])
         {
-            translate([0.0, 0.0, 3.0])
+            linear_extrude(height = 4.5, twist = 0.0, scale = 0.020833333333333332, slices = 1, center = true)
             {
-                linear_extrude(height = 6.0, twist = 0.0, scale = 0.015625, slices = 1, center = true)
+                scale([48.0, 48.0])
                 {
-                    scale([64.0, 64.0])
+                    M205();
+                }
+            }
+        }
+        translate([0.0, 0.0, 1.05])
+        {
+            linear_extrude(height = 3.0, twist = 0.0, scale = 1.0, slices = 1, center = false)
+            {
+                difference()
+                {
+                    scale([24.0, 24.0])
+                    {
+                        M205();
+                    }
+                    scale([0.0, 0.0])
                     {
                         M205();
                     }
                 }
             }
-            translate([0.0, 0.0, 2.0])
-            {
-                linear_extrude(height = 4.0, twist = 0.0, scale = 1.0, slices = 1, center = false)
-                {
-                    difference()
-                    {
-                        scale([32.0, 32.0])
-                        {
-                            M205();
-                        }
-                        scale([0.0, 0.0])
-                        {
-                            M205();
-                        }
-                    }
-                }
-            }
-            translate([0.0, 0.0, 4.0])
-            {
-                translate([0.0, 0.0, 20.0])
-                {
-                    linear_extrude(height = 40.0, twist = 0.0, scale = 0.06666666666666667, slices = 1, center = true)
-                    {
-                        scale([30.0, 30.0])
-                        {
-                            M205();
-                        }
-                    }
-                }
-            }
         }
-        translate([14.399999999999999, 0.0, 0.0])
+        translate([0.0, 0.0, 3.0])
         {
-            translate([0.0, 0.0, -2.0])
+            translate([0.0, 0.0, 15.0])
             {
-                rotate_extrude(angle = 360.0, $fn = 128)
+                linear_extrude(height = 30.0, twist = 0.0, scale = 0.06666666666666667, slices = 1, center = true)
                 {
-                    M319();
+                    scale([22.5, 22.5])
+                    {
+                        M205();
+                    }
                 }
             }
         }
     }
-    translate([-14.399999999999999, 0.0, 0.0])
+    translate([-10.799999999999999, 0.0, 0.0])
     {
-        translate([0.0, 0.0, -2.0])
+        translate([0.0, 0.0, -1.5])
         {
             rotate_extrude(angle = 360.0, $fn = 128)
             {
-                M319();
+                M386();
             }
         }
     }
+    translate([10.799999999999999, 0.0, 0.0])
+    {
+        translate([0.0, 0.0, -1.5])
+        {
+            rotate_extrude(angle = 360.0, $fn = 128)
+            {
+                M386();
+            }
+        }
+    }
+}
+
+module M386()
+{
+    polygon
+    (
+        points =
+        [
+            [0.0, -0.2], 
+            [1.6, -0.2], 
+            [1.6, 0.775], 
+            [1.225, 1.15], 
+            [1.225, 0.725], 
+            [1.6, 1.1], 
+            [1.6, 13.325], 
+            [0.0, 13.325]
+        ],
+        paths =
+        [
+            [0, 1, 2, 3, 4, 5, 6, 7]
+        ]
+    );
 }
 
 module M205()
@@ -142,28 +161,6 @@ module M205()
         paths =
         [
             [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63]
-        ]
-    );
-}
-
-module M319()
-{
-    polygon
-    (
-        points =
-        [
-            [0.0, -0.2], 
-            [2.1, -0.2], 
-            [2.1, 0.9], 
-            [1.6, 1.4], 
-            [1.6, 1.1], 
-            [2.1, 1.6], 
-            [2.1, 17.7], 
-            [0.0, 17.7]
-        ],
-        paths =
-        [
-            [0, 1, 2, 3, 4, 5, 6, 7]
         ]
     );
 }

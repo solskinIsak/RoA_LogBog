@@ -21,7 +21,7 @@ public class EvilClicker {
 
     public static void main(String[] args) {
         JavaCSG csg = JavaCSGFactory.createDefault();
-        EvilClicker evilClicker = new EvilClicker(csg, 20);
+        EvilClicker evilClicker = new EvilClicker(csg, 15);
         Geometry3D res = evilClicker.getEvilClicker();
         csg.view(res);
     }

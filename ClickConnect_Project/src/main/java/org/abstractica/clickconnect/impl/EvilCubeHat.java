@@ -18,7 +18,7 @@ public class EvilCubeHat {
         Geometry3D evilCubeHat = csg.cone3D(3.2 * unit, 1, 0.3 * unit, 64, false);
         Geometry3D evilHatTop = csg.cone3D(1.5 * unit, 0.1 * unit, 2 * unit, 64, false);
         Geometry3D evilHatBrim = csg.flatRing3D(0, 1.6 * unit, 0.2 * unit, 64, false);
-        evilHatBrim = csg.translate3DZ(0.1 * unit).transform(evilHatBrim);
+        evilHatBrim = csg.translate3DZ(0.07 * unit).transform(evilHatBrim);
         evilHatTop = csg.translate3DZ(0.2 * unit).transform(evilHatTop);
         evilCubeHat = csg.union3D(evilCubeHat, evilHatBrim, evilHatTop);
 
@@ -29,13 +29,13 @@ public class EvilCubeHat {
 //        clickerHole = csg.translate3DZ(0.75*unit).transform(clickerHole);
 //        clickerHole = csg.translate3DX(-0.01*unit).transform(clickerHole); // til hvis hatten kunne printes så den ku klikkes i
 //        clickerHole = csg.rotate3DY(csg.degrees(90)).transform(clickerHole);
-        evilCubeHat = csg.difference3D(evilCubeHat, clickerHole);
+//        evilCubeHat = csg.difference3D(evilCubeHat, clickerHole);
 
         RoundClicker roundClicker2 = new RoundClicker(csg, 0.25 * unit);
         Geometry3D clickerHole2 = roundClicker2.getRoundHoleCutout(3);
         clickerHole2 = csg.translate3DZ(-0.1 * unit).transform(clickerHole2);
         clickerHole2 = csg.translate3DX(-0.72 * unit).transform(clickerHole2);
-        evilCubeHat = csg.difference3D(evilCubeHat, clickerHole2);
+        evilCubeHat = csg.difference3D(evilCubeHat, clickerHole2, clickerHole);
 
         return evilCubeHat;
 
@@ -44,7 +44,7 @@ public class EvilCubeHat {
 
     public static void main(String[] args) {
         JavaCSG csg = JavaCSGFactory.createDefault();
-        EvilCubeHat evilCubeHat = new EvilCubeHat(csg, 20);
+        EvilCubeHat evilCubeHat = new EvilCubeHat(csg, 15);
         Geometry3D res = evilCubeHat.getEvilCubeHat();
         csg.view(res);
 

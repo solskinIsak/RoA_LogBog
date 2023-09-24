@@ -20,9 +20,9 @@ public class EvilCube implements RoundClickSystem {
 
 
 
-        Geometry2D text = csg.text2D(".͜.", 7.0,10,64);
-        Geometry3D text3d = csg.linearExtrude(2, true,text);
-        Transform3D move = csg.translate3DX(-0.53*unit);
+        Geometry2D text = csg.text2D(".͜.", 8,15,64);
+        Geometry3D text3d = csg.linearExtrude(3, true,text);
+        Transform3D move = csg.translate3DX(-unit*0.81);
         text3d = move.transform(text3d);
         text3d = csg.translate3DZ(0.75*unit).transform(text3d);
         text3d = csg.translate3DY(0.75*unit).transform(text3d);
@@ -52,13 +52,19 @@ public class EvilCube implements RoundClickSystem {
         evilCube = csg.difference3D(evilCube, clicker2);
 
         evilCube = csg.difference3D(evilCube,text3d,hole);
+
+//        EvilCubeHat evilCubeHat = new EvilCubeHat(csg, 25);
+//        Geometry3D evilHat = evilCubeHat.getEvilCubeHat();
+//        evilHat = csg.translate3DZ(1.5*unit).transform(evilHat);
+//        evilHat = csg.translate3DY(0*unit).transform(evilHat);
+//        evilCube = csg.union3D(evilCube, evilHat);
         return evilCube;
 
     }
 
     public static void main(String[] args) {
         JavaCSG csg = JavaCSGFactory.createDefault();
-        EvilCube evilCube = new EvilCube(csg, 20);
+        EvilCube evilCube = new EvilCube(csg, 15);
         Geometry3D res = evilCube.getEvilCube();
         csg.view(res);
     }
