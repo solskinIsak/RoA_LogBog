@@ -32,6 +32,10 @@ Idag skulle vi 'lege' med 3D printning, vi sammen med Tobias fik målet, og kode
 #19-9-2023
 Idag fik vi sammen arbejdet på at lave en universelv og dynamisk måde at implementerer og bruge vores klikke system ved hjælpe fra Tobias, vi fik anvendt både unit og delta measures som skulle gøre det nemmere i fremtiden at justerer og tilpasse de her klikkere og huller til vores andre projekter eller til videre udvikling af tog projektet.
 
-#21-9-2023
+# 21-9-2023
 vi fik stillet en SP opgave af Tobias hvor vi skulle tage og andvende det vi havde lært og sat sammen i tirsdags(19-9-2023) og så lave et selvstændigt lille projekt hvor vi bruger klikkere, huller og låse. Jeg har formået at få designet en cube med to låse huller til klikkere samt en troldmandshat som har to runde huller den nødvendige ekstra lange klikker skal gå igennem for at hæfte hatten fast på kassen. Jeg lærte at de dynaimske ændringer og rettelser vi havde brugt dagen i tirsdags på at sidde og lave med tobias virkelig gjorde det en del nemmere at anvende i dette projekt, samt fik jeg anvendt at bruge interfacen vi fik sat op til at kalde de værktøjer(hullere og klikkere) som var nødvendige i dette projekt meget sjovt!
+
+# 26-9-2023 
+Vi fik arbejdet videre fra vores brainstorm i sidste uge, på vores projekt der bygger via 3d print, en motor og en fugtmåler en maskine der kan skænke vin op. jeg fik modelleret første del til vores krog, en arm med hul og link.
+
 
