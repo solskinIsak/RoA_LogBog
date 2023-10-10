@@ -38,4 +38,14 @@ vi fik stillet en SP opgave af Tobias hvor vi skulle tage og andvende det vi hav
 # 26-9-2023 
 Vi fik arbejdet videre fra vores brainstorm i sidste uge, på vores projekt der bygger via 3d print, en motor og en fugtmåler en maskine der kan skænke vin op. jeg fik modelleret første del til vores krog, en arm med hul og link.
 
+# 29-9-2023
+Jeg fik designet første prototype til en spole i stedet for krog ideen vi startede ud med. Det viste sig at krogen fra den originale ide ikke ville være optimalt da motoren vi bruger ikke kan generere nok kraft til at trække rogen og åbne for vintappen.
 
+# 3-10-2023 
+Idag fik jeg designet og modelleret en holder til vores stepmotor som vores nye spole skal monteres fast på, holderen med motoren skal monteres på toppen af vinkassen ved brug af små pigge i bunden af holderen som skal slås ind i pappet og forhåbentligt sidder den nok i spænd til at kunne trække i proppen og åbne vintappen.
+
+# 6-10-2023
+Update på spole design. Igen viste det sig at min spole ide var fejlagtig og ikke var den optimale måde at trække vintappen på da designet var fejlagtigt og ikke tog højde for at mængde af kræft og modstand der kommer på "pindende" i spolen snoren skal bindes op om var for svage og ville knække under presset, derudover var ideen med at have pigge under motorholderen også var fejlagtig eftersom at ved nok trækkraft bliver holderen simpelthen trukket ud af pappet. så ny brainstorm om hvordan vi kommer videre med designet fandt sted og vi kom op med ny ide vi sætter igang på mandag, ny spole og ny holder.
+
+# 10-10-2023
+Ny holder til stepmotor blev designet nu til at dække hele toppen af vinkassen så der er nok modstand til at holderen ikke bliver trukket af / falder af under press og så har vi total omtænkt vores nye spole til at ligne mere end spole på en fisketang som skal trække viproppen ved brug af fiskesnørre for at åbne tappen. ## UPDATE SPOLENS CYLINDER I MIDTEN VAR FOR STOR OG KRÆVEDE FOR MEGET KRAFT AT TRÆKKE I VINTAPPEN SÅ VI HAR MINDSKET CYLINDEREN SOM RESULTAT OG SER PÅ MANDAG OM EN MINDRE CYLINDER GIVER NOK KRAFT TIL AT ÅBNE TAPPEN.
