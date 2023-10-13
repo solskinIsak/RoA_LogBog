@@ -3,24 +3,24 @@ package org.abstractica.clickconnect.impl;
 import org.abstractica.clickconnect.RoundClickSystem;
 import org.abstractica.javacsg.*;
 
-public class BeerClaw implements RoundClickSystem {
+public class RotorSpool_Prototype1 implements RoundClickSystem {
 
     private final JavaCSG csg;
     private final double unit;
 
-    public BeerClaw(JavaCSG csg, double unit) {
+    public RotorSpool_Prototype1(JavaCSG csg, double unit) {
         this.csg = csg;
         this.unit = unit;
     }
 
-    public Geometry3D getBeerClawHole() {
+    public Geometry3D getRotorSpoolHole() {
         Geometry3D cylindr = csg.cylinder3D(5, 1*unit, 128, false);
         Geometry3D rect = csg.box3D(3, 5, 1*unit, false);
         cylindr = csg.intersection3D(cylindr, rect);
         return cylindr;
     }
 
-    public Geometry3D getBeerClawLink(){
+    public Geometry3D getSpoolFork(){
         Geometry3D cylindr = csg.cylinder3D(5, 15, 6, false);
         Geometry3D cylindr2 = csg.cylinder3D(5, 15, 6, false);
         cylindr = csg.translate3DX(15).transform(cylindr);
@@ -40,21 +40,21 @@ public class BeerClaw implements RoundClickSystem {
         return cylindr;
     }
 
-    public Geometry3D getBeerClawArm(){
-        Geometry3D armhole = csg.box3D(40, 8, 8, false);
-        armhole = csg.translate3DX(0).transform(armhole);
-        armhole = csg.union3D(armhole, getBeerClawLink());
-        armhole = csg.difference3D(armhole, getBeerClawHole(), getNeedleEye());
-
-        return armhole;
+    public Geometry3D getSpoolMainBody(){
+        Geometry3D mainBody = csg.box3D(40, 8, 8, false);
+        mainBody = csg.translate3DX(0).transform(mainBody);
+        mainBody = csg.union3D(mainBody, getSpoolFork());
+        mainBody = csg.difference3D(mainBody, getRotorSpoolHole(), getNeedleEye());
+        
+        return mainBody;
     }
 
     public static void main(String[] args) {
         JavaCSG csg = JavaCSGFactory.createDefault();
-        BeerClaw beerClaw = new BeerClaw(csg, 15);
-//        Geometry3D res = beerClaw.getBeerClawHole();
-        Geometry3D res = beerClaw.getBeerClawArm();
-//        Geometry3D res = beerClaw.getBeerClawLink();
+        RotorSpool_Prototype1 rotorSpoolPrototype1 = new RotorSpool_Prototype1(csg, 15);
+//        Geometry3D res = rotorSpoolPrototype1.getBeerClawHole();
+        Geometry3D res = rotorSpoolPrototype1.getSpoolMainBody();
+//        Geometry3D res = rotorSpoolPrototype1.getBeerClawLink();
 
         csg.view(res);
     }
