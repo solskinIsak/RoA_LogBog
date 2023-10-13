@@ -4,11 +4,14 @@ rotate([90.0, 0.0, 0.0])
     {
         union()
         {
-            linear_extrude(height = 80.0, twist = 0.0, scale = 1.0, slices = 1, center = false)
+            translate([0.0, -2.5, 0.0])
             {
-                scale([90.0, 10.0])
+                linear_extrude(height = 61.5, twist = 0.0, scale = 1.0, slices = 1, center = false)
                 {
-                    M22();
+                    scale([90.0, 5.0])
+                    {
+                        M22();
+                    }
                 }
             }
             rotate([90.0, 0.0, 0.0])
@@ -25,7 +28,7 @@ rotate([90.0, 0.0, 0.0])
                 }
             }
         }
-        linear_extrude(height = 54.0, twist = 0.0, scale = 1.0, slices = 1, center = false)
+        linear_extrude(height = 40.0, twist = 0.0, scale = 1.0, slices = 1, center = false)
         {
             scale([35.0, 35.0])
             {
@@ -34,7 +37,7 @@ rotate([90.0, 0.0, 0.0])
         }
         translate([0.0, 41.0, 0.0])
         {
-            translate([0.0, 0.0, 54.0])
+            translate([0.0, 0.0, 40.0])
             {
                 rotate([90.0, 0.0, 0.0])
                 {
