@@ -3,11 +3,11 @@ package org.abstractica.clickconnect.impl;
 import org.abstractica.javacsg.*;
 
 
-public class StepMotorHolder {
+public class StepMotor3DModel {
     private final JavaCSG csg;
 
 
-    public StepMotorHolder(JavaCSG csg) {
+    public StepMotor3DModel(JavaCSG csg) {
         this.csg = csg;
     }
 
@@ -43,8 +43,8 @@ public class StepMotorHolder {
 
     public static void main(String[] args) {
         JavaCSG csg = JavaCSGFactory.createDefault();
-        StepMotorHolder stepMotorHolder = new StepMotorHolder(csg);
-        Geometry3D res = stepMotorHolder.getStepMotorHolder();
+        StepMotor3DModel stepMotor3DModel = new StepMotor3DModel(csg);
+        Geometry3D res = stepMotor3DModel.getStepMotorHolder();
         csg.view(res);
     }
 }

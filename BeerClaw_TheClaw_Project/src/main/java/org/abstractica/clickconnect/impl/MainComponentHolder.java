@@ -14,8 +14,8 @@ public class MainComponentHolder {
         Geometry3D box = csg.box3D(45, 40, 60, false);
         box = csg.translate3DZ(-40).transform(box);
 
-        StepMotorHolder stepMotorHolder = new StepMotorHolder(csg);
-        Geometry3D stepMotor = stepMotorHolder.getStepMotorHolder();
+        StepMotor3DModel stepMotor3DModel = new StepMotor3DModel(csg);
+        Geometry3D stepMotor = stepMotor3DModel.getStepMotorHolder();
 
         Geometry3D wireHole = csg.box3D(14.5,7,6,false);
         wireHole = csg.translate3DZ(11.5).transform(wireHole);

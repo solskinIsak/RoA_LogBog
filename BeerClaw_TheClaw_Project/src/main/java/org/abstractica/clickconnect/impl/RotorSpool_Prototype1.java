@@ -45,7 +45,7 @@ public class RotorSpool_Prototype1 implements RoundClickSystem {
         mainBody = csg.translate3DX(0).transform(mainBody);
         mainBody = csg.union3D(mainBody, getSpoolFork());
         mainBody = csg.difference3D(mainBody, getRotorSpoolHole(), getNeedleEye());
-        
+
         return mainBody;
     }
 

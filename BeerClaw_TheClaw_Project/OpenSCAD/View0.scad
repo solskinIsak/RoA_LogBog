@@ -1,75 +1,46 @@
-difference()
+rotate([90.0, 0.0, 0.0])
 {
-    union()
+    difference()
     {
-        translate([0.0, 0.0, 0.0])
+        union()
         {
-            linear_extrude(height = 8.0, twist = 0.0, scale = 1.0, slices = 1, center = false)
+            linear_extrude(height = 80.0, twist = 0.0, scale = 1.0, slices = 1, center = false)
             {
-                scale([400.0, 8.0])
+                scale([90.0, 10.0])
                 {
                     M22();
                 }
             }
-        }
-        union()
-        {
-            translate([0.0, 0.0, 8.0])
+            rotate([90.0, 0.0, 0.0])
             {
-                translate([15.0, 0.0, 0.0])
+                translate([0.0, 0.0, -47.5])
                 {
-                    linear_extrude(height = 15.0, twist = 0.0, scale = 1.0, slices = 1, center = false)
+                    linear_extrude(height = 52.5, twist = 0.0, scale = 1.0, slices = 1, center = false)
                     {
-                        scale([5.0, 5.0])
+                        scale([90.0, 5.0])
                         {
-                            M508();
-                        }
-                    }
-                }
-            }
-            translate([-15.0, 0.0, 0.0])
-            {
-                translate([0.0, 0.0, 8.0])
-                {
-                    linear_extrude(height = 15.0, twist = 0.0, scale = 1.0, slices = 1, center = false)
-                    {
-                        scale([5.0, 5.0])
-                        {
-                            M508();
+                            M22();
                         }
                     }
                 }
             }
         }
-    }
-    intersection()
-    {
-        linear_extrude(height = 15.0, twist = 0.0, scale = 1.0, slices = 1, center = false)
+        linear_extrude(height = 54.0, twist = 0.0, scale = 1.0, slices = 1, center = false)
         {
-            scale([5.0, 5.0])
+            scale([35.0, 35.0])
             {
                 M490();
             }
         }
-        linear_extrude(height = 15.0, twist = 0.0, scale = 1.0, slices = 1, center = false)
+        translate([0.0, 41.0, 0.0])
         {
-            scale([3.0, 5.0])
-            {
-                M22();
-            }
-        }
-    }
-    translate([0.0, 2.5, 0.0])
-    {
-        translate([15.0, 0.0, 0.0])
-        {
-            translate([0.0, 0.0, 21.0])
+            translate([0.0, 0.0, 54.0])
             {
                 rotate([90.0, 0.0, 0.0])
                 {
-                    linear_extrude(height = 4.75, twist = 0.0, scale = 1.0, slices = 1, center = false)
+                    linear_extrude(height = 110.0, twist = 0.0, scale = 1.0, slices = 1, center = false)
                     {
-                        scale([1.0, 1.0])
+                        scale([35.0, 35.0])
                         {
                             M490();
                         }
@@ -77,6 +48,89 @@ difference()
                 }
             }
         }
+        translate([0.0, 30.0, 0.0])
+        {
+            linear_extrude(height = 80.0, twist = 0.0, scale = 1.0, slices = 1, center = false)
+            {
+                scale([82.0, 54.0])
+                {
+                    M22();
+                }
+            }
+        }
+        translate([0.0, -5.0, 0.0])
+        {
+            translate([22.5, 0.0, 0.0])
+            {
+                translate([0.0, 0.0, 60.0])
+                {
+                    rotate([0.0, 60.00000000000001, 0.0])
+                    {
+                        rotate([90.0, 0.0, 0.0])
+                        {
+                            linear_extrude(height = 3.0, twist = 0.0, scale = 1.0, slices = 1, center = true)
+                            {
+                                union()
+                                {
+                                    translate([0.0, 0.0])
+                                    {
+                                        M1028();
+                                    }
+                                    translate([10.0, 0.0])
+                                    {
+                                        M1029();
+                                    }
+                                    translate([20.0, 0.0])
+                                    {
+                                        M1028();
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+module M1028()
+{
+    scale([1.3333333333333333, 1.3333333333333333])
+    {
+        text
+        (
+            text = ".",
+            size = 10.0,
+            font = "Consolas:style=Regular",
+            halign = "left",
+            valign = "baseline",
+            spacing = 1.0,
+            direction = "ltr",
+            language = "en",
+            script = "latin",
+            $fn = 64
+        );
+    }
+}
+
+module M1029()
+{
+    scale([1.3333333333333333, 1.3333333333333333])
+    {
+        text
+        (
+            text = "͜",
+            size = 10.0,
+            font = "Consolas:style=Regular",
+            halign = "left",
+            valign = "baseline",
+            spacing = 1.0,
+            direction = "ltr",
+            language = "en",
+            script = "latin",
+            $fn = 64
+        );
     }
 }
 
@@ -236,26 +290,6 @@ module M490()
         paths =
         [
             [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100, 101, 102, 103, 104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115, 116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127]
-        ]
-    );
-}
-
-module M508()
-{
-    polygon
-    (
-        points =
-        [
-            [0.5, 0.0], 
-            [0.25000000000000006, 0.4330127018922193], 
-            [-0.2499999999999999, 0.43301270189221935], 
-            [-0.5, 6.123233995736766E-17], 
-            [-0.2500000000000002, -0.4330127018922192], 
-            [0.24999999999999967, -0.4330127018922195]
-        ],
-        paths =
-        [
-            [0, 1, 2, 3, 4, 5]
         ]
     );
 }
