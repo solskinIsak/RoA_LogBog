@@ -50,3 +50,12 @@ Update på spole design. Igen viste det sig at min spole ide var fejlagtig og ik
 # 10-10-2023
 Ny holder til stepmotor blev designet nu til at dække hele toppen af vinkassen så der er nok modstand til at holderen ikke bliver trukket af / falder af under press og så har vi total omtænkt vores nye spole til at ligne mere end spole på en fisketang som skal trække viproppen ved brug af fiskesnørre for at åbne tappen. 
 ## UPDATE til 10-10-2023 SPOLENS CYLINDER I MIDTEN VAR FOR STOR OG KRÆVEDE FOR MEGET KRAFT AT TRÆKKE I VINTAPPEN SÅ VI HAR MINDSKET CYLINDEREN SOM RESULTAT OG SER PÅ MANDAG OM EN MINDRE CYLINDER GIVER NOK KRAFT TIL AT ÅBNE TAPPEN.
+
+# 13-10-2023
+Jeg fik 3D printet en skillevæg mellem papvinens tap og kassen selv som skulle fuldføre det formål at holde på tappen når vores pole trækker i snoren og trækker i tappens vinger for at serverer vinen. Men målene var drastisk forkerte og væggen endte med at være ubruelig. Jeg kommer henover ferien til at kode den om eller i hvert fald "re-modellere" den så den har nemmere ved at blive monteret og faktisk kan blive brugt.
+
+# 19-10-2023
+Jeg har nu Remoddelleret skillevæggen som nævnt fra tidligere indslag. Jeg har tilføjet en 40mm bred firkant i hullet på væggen som skulle gøre det muligt for tappen at komme igennnem hullet men samtidigt stadig gøre det muligt for plastikken at holde på tappen så vi slipper for at holde fast i tappen manuelt.
+## UPDATE til 10-19-2023 - Jeg fik senere på dagen gjort væggene på siden af skildevæggen lidt højere så montering på papvin-kassen er burde være nemmere dennegang.
+
+
