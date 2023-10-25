@@ -66,4 +66,5 @@ Jeg tilføjede koden til Stepmotoren, fugtighedsmåleren samt nodeMCU'en med til
 
 ## OBS DEMO VIDEOER TIL PAPVINS PROJEKTET KAN FINDES HER >> https://github.com/solskinIsak/RoA_LogBog/tree/main/BeerClaw_TheClaw_Project/src/DEMO_VIDEOS 
 
+## UDPATE PÅ 21-9-2023 >> jeg fik d. 25-10-2023 gået tilbage og fik løst problemet i mit "evilcube" projekt også kaldet clickconnect_project hvor hullerne til klikkerne forsvandt under rendering.
 
