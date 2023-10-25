@@ -11,8 +11,8 @@ public class EvilClicker {
     }
 
     public Geometry3D getEvilClicker(){
-        RoundClicker roundClicker = new RoundClicker(csg, 0.25*unit);
-        Geometry3D clicker = roundClicker.getClicker(3.5, true);
+        RoundClicker roundClicker = new RoundClicker();
+        Geometry3D clicker = roundClicker.getHole(csg,3.5);
         clicker = csg.translate3DZ(1.375*unit).transform(clicker);
         clicker = csg.translate3DX(0.72*unit).transform(clicker);
         return clicker;

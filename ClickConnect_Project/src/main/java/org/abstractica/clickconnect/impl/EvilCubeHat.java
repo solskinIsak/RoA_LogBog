@@ -14,7 +14,6 @@ public class EvilCubeHat {
     }
 
     public Geometry3D getEvilCubeHat() {
-//        Geometry3D evilCubeHat = csg.flatRing3D(unit, 64, 0.1*unit, 64, false);
         Geometry3D evilCubeHat = csg.cone3D(3.2 * unit, 1, 0.3 * unit, 64, false);
         Geometry3D evilHatTop = csg.cone3D(1.5 * unit, 0.1 * unit, 2 * unit, 64, false);
         Geometry3D evilHatBrim = csg.flatRing3D(0, 1.6 * unit, 0.2 * unit, 64, false);
@@ -22,17 +21,13 @@ public class EvilCubeHat {
         evilHatTop = csg.translate3DZ(0.2 * unit).transform(evilHatTop);
         evilCubeHat = csg.union3D(evilCubeHat, evilHatBrim, evilHatTop);
 
-        RoundClicker roundClicker = new RoundClicker(csg, 0.25 * unit);
-        Geometry3D clickerHole = roundClicker.getRoundHoleCutout(3);
+        RoundClicker roundClicker = new RoundClicker();
+        Geometry3D clickerHole = roundClicker.getHole(csg,3);
         clickerHole = csg.translate3DZ(-0.1 * unit).transform(clickerHole);
         clickerHole = csg.translate3DX(0.72 * unit).transform(clickerHole);
-//        clickerHole = csg.translate3DZ(0.75*unit).transform(clickerHole);
-//        clickerHole = csg.translate3DX(-0.01*unit).transform(clickerHole); // til hvis hatten kunne printes så den ku klikkes i
-//        clickerHole = csg.rotate3DY(csg.degrees(90)).transform(clickerHole);
-//        evilCubeHat = csg.difference3D(evilCubeHat, clickerHole);
 
-        RoundClicker roundClicker2 = new RoundClicker(csg, 0.25 * unit);
-        Geometry3D clickerHole2 = roundClicker2.getRoundHoleCutout(3);
+        RoundClicker roundClicker2 = new RoundClicker();
+        Geometry3D clickerHole2 = roundClicker2.getHole(csg,3);
         clickerHole2 = csg.translate3DZ(-0.1 * unit).transform(clickerHole2);
         clickerHole2 = csg.translate3DX(-0.72 * unit).transform(clickerHole2);
         evilCubeHat = csg.difference3D(evilCubeHat, clickerHole2, clickerHole);
