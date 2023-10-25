@@ -58,4 +58,10 @@ Jeg fik 3D printet en skillevæg mellem papvinens tap og kassen selv som skulle 
 Jeg har nu Remoddelleret skillevæggen som nævnt fra tidligere indslag. Jeg har tilføjet en 40mm bred firkant i hullet på væggen som skulle gøre det muligt for tappen at komme igennnem hullet men samtidigt stadig gøre det muligt for plastikken at holde på tappen så vi slipper for at holde fast i tappen manuelt.
 ## UPDATE til 10-19-2023 - Jeg fik senere på dagen gjort væggene på siden af skildevæggen lidt højere så montering på papvin-kassen er burde være nemmere dennegang.
 
+# 23-10-2023 
+Jeg fik færdiggjort skillevæggen mellem vintappen og papvinen, og fik den printet. >> GODE NYHEDER << målene var korrekte og den passede ved første forsøg! så nu kan vinen tappes uden hjælp fra menneske hænder.
+
+# 25-10-2023 
+Jeg tilføjede koden til Stepmotoren, fugtighedsmåleren samt nodeMCU'en med tilføjede kommentarer samt puttede kommentarer i koden til alle 3D modellerings delene til vores maskine.
+
 
