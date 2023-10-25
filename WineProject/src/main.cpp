@@ -71,7 +71,7 @@ void loop()
       }
     }
   }
-  stepper.run(); // kører stepper-motoren OBS: SKAL VÆRE I LOOPET men IKKE I IF STATEMENTET DA DEN IKKE VIL KØRE HVIS DEN ER I IF STATEMENTET.
+  stepper.run(); // kører stepper-motoren OBS: SKAL være I LOOPET men IKKE I IF STATEMENTET DA DEN IKKE VIL KØRE HVIS DEN ER I IF STATEMENTET.
 }
 
 
