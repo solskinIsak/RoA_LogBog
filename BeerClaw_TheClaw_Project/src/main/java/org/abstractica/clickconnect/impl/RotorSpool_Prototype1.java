@@ -3,7 +3,7 @@ package org.abstractica.clickconnect.impl;
 import org.abstractica.clickconnect.RoundClickSystem;
 import org.abstractica.javacsg.*;
 
-public class RotorSpool_Prototype1 implements RoundClickSystem {
+public class RotorSpool_Prototype1 implements RoundClickSystem { // FAILED PROTOTYPE
 
     private final JavaCSG csg;
     private final double unit;
@@ -52,10 +52,7 @@ public class RotorSpool_Prototype1 implements RoundClickSystem {
     public static void main(String[] args) {
         JavaCSG csg = JavaCSGFactory.createDefault();
         RotorSpool_Prototype1 rotorSpoolPrototype1 = new RotorSpool_Prototype1(csg, 15);
-//        Geometry3D res = rotorSpoolPrototype1.getBeerClawHole();
         Geometry3D res = rotorSpoolPrototype1.getSpoolMainBody();
-//        Geometry3D res = rotorSpoolPrototype1.getBeerClawLink();
-
         csg.view(res);
     }
 

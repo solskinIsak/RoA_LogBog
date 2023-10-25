@@ -10,6 +10,9 @@ public class MainComponentHolder {
         this.csg = csg;
     }
 
+
+            /* Bygger hovedkomponenten til PapVin-Kassen (holderen)/(låget)
+               denne metode(getMainComp) er en samling af de andre metoder i denne klasse. Der bygger den samlede figur/model.*/
     Geometry3D getMainComp() {
         Geometry3D box = csg.box3D(45, 40, 60, false);
         box = csg.translate3DZ(-40).transform(box);
@@ -33,11 +36,12 @@ public class MainComponentHolder {
 
 
 
-    Geometry3D getWineBoxPlateHolder(){
+    Geometry3D getWineBoxPlateHolder(){ // Denne metode bygger holderen/ selve låget til papvinen
         Geometry3D wineHolder = csg.box3D(90, 34, 195, false);
         wineHolder = csg.translate3DZ(-183.5).transform(wineHolder);
         wineHolder = csg.translate3DY(37).transform(wineHolder);
 
+        //dette er til hullet som toppen af kassen skal ind i
         Geometry3D wineHole = csg.box3D(82, 30, 186, false);
         wineHole = csg.translate3DZ(-179).transform(wineHole);
         wineHole = csg.translate3DY(39.5).transform(wineHole);
@@ -50,6 +54,8 @@ public class MainComponentHolder {
 
         return wineHolder;
     }
+
+    //mit signatur ansigt så jeg kunne holde styr på hvad jeg havde modelleret til projektet.
     public Geometry3D getFace() {
         Geometry2D text = csg.text2D(".͜.", 16, 30, 64);
         Geometry3D text3d = csg.linearExtrude(3, true, text);
@@ -63,6 +69,8 @@ public class MainComponentHolder {
         return text3d;
     }
 
+
+    //Denne metode samler de to andre metoder og roterer den til den ønskede position. Denne metode er den som skal bruges til at printe modellen.
     Geometry3D getMainComponentCollected(){
         Geometry3D MainComponentCollected = getMainComp();
         Geometry3D WineBoxPlateHolder = getWineBoxPlateHolder();
@@ -74,7 +82,7 @@ public class MainComponentHolder {
         return MainComponentCollected;
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) { // main metoden som printer modellen
         JavaCSG csg = JavaCSGFactory.createDefault();
         MainComponentHolder mainComponentHolder = new MainComponentHolder(csg);
         Geometry3D res = mainComponentHolder.getMainComponentCollected();

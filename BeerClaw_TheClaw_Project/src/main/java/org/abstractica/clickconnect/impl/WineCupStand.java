@@ -2,11 +2,11 @@ package org.abstractica.clickconnect.impl;
 import org.abstractica.javacsg.*;
 
 
-public class BeerClawStand {
+public class WineCupStand {
     private final JavaCSG csg;
     private final double unit;
 
-    public BeerClawStand(JavaCSG csg, double unit) {
+    public WineCupStand(JavaCSG csg, double unit) {
         this.csg = csg;
         this.unit = unit;
     }
@@ -22,7 +22,7 @@ public class BeerClawStand {
 
 return text3d;
     }
-    public Geometry3D getBeerClawStand() {
+    public Geometry3D getWineCupStand() {
         Geometry3D stand = csg.box3D(70, 80, 45, false);
         Geometry3D standHole = csg.cone3D(56, 75, 86, 64, false);
         Geometry3D standTongue = csg.flatRing3D(0, 80, 10, 64, false);
@@ -49,8 +49,8 @@ return text3d;
 
     public static void main(String[] args) {
         JavaCSG csg = JavaCSGFactory.createDefault();
-        BeerClawStand beerClawStand = new BeerClawStand(csg, 15);
-        Geometry3D res = beerClawStand.getBeerClawStand();
+        WineCupStand wineCupStand = new WineCupStand(csg, 15);
+        Geometry3D res = wineCupStand.getWineCupStand();
         csg.view(res);
     }
 }
