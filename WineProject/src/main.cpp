@@ -50,7 +50,8 @@ void loop()
       stepper.moveTo(-maxDistance);
     } 
     else if(server._isMoving){
-      if(targetPosition <= maxDistance){
+      if(targetPosition <= maxDistance){   /*Tjekker om variablen _isMoving er true og tjekker om target position er mindre end maxDistance,
+                                            hvis den er så sætter den stepper-motorens målposition til targetPosition som er 500. */
       targetPosition += 500;
       stepper.moveTo(targetPosition);
       server.move(false);
@@ -58,16 +59,19 @@ void loop()
     }
     else if(server.getIsOn()){
 
-      if(targetPosition <= maxDistance){
+      if(targetPosition <= maxDistance){ /* tjekker først om server.getIsOn er true og hvis den er så tjekker den om targetPosition er mindre end eller lig med maxDistance,
+                                            er den det så sætter den stepper-motorens målposition til targetPosition som er 500. */
       stepper.moveTo(targetPosition);
       
-      if (stepper.distanceToGo() == 0) {
+      if (stepper.distanceToGo() == 0) { /*tjekker om stepper-motoren er færdig med at køre,
+                                           hvis den er så sætter den targetPosition til 0 og sætter _isMoving til false*/
+        server.move(false);
       targetPosition += 500;
       } 
       }
     }
   }
-  stepper.run();
+  stepper.run(); // kører stepper-motoren OBS: SKAL VÆRE I LOOPET men IKKE I IF STATEMENTET DA DEN IKKE VIL KØRE HVIS DEN ER I IF STATEMENTET.
 }
 
 
